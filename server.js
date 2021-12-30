@@ -3,8 +3,6 @@ const server = express();
 
 const mainRouter = require('./routes/main');
 
-
-
 server.set('view engine', 'ejs');
 
 server.use(express.urlencoded({extended :false}));

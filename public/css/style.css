@@ -7,10 +7,6 @@ body {
     font-family: "OpenSans-Regular"
 }
 
-#noMatch {
-    color: red;
-}
-
 table {
     width: 50%;
     border-collapse: collapse;
@@ -48,5 +44,9 @@ input {
 
 a:visited, a {
     color: blue;
+}
+
+#noMatch {
+    color: red;
 }
 
