@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="css/style.css">
+<h1>Login</h1>
+<form action="/login" method="POST">
+    <div class='usernameDiv'>
+        <label for="attemptedName">Name</label>
+        <input type="text" name="attemptedName" value="<%=locals.attemptedName%>" required>
+    </div>
+    <div class='passwordDiv'>
+        <label for="attemptedPassword">Password</label>
+        <input type="password" name="attemptedPassword" value="<%=locals.attemptedPassword%>" required>
+    </div>
+    <p id="noMatch">
+        <%=message%>
+    </p>
+    <button type="submit">Submit</button>
+    <p>
+        Not signed up?
+        <a href="/signup">Create account here</a>
+    </p>
+</form>
+<%- include('partials/footer.ejs') %>

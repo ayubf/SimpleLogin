@@ -1,0 +1,52 @@
+@import url("fonts.css");
+
+body {
+    padding: 50px;
+    max-width: 1000px;
+    margin:0 auto; 
+    font-family: "OpenSans-Regular"
+}
+
+#noMatch {
+    color: red;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    padding: 5;
+}
+
+tr:nth-child(even) {
+    background-color: #CCD1E4;
+}
+
+form {
+    width: 326px;
+    height: 200px;
+    background-color: #dddaf8;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+
+input {
+    padding: 2px;
+}
+
+
+.footerDiv {
+    padding-top: 50px;
+    font-family: "UbuntuMono-Regular";
+    text-align: center;
+}
+
+a:visited, a {
+    color: blue;
+}
+

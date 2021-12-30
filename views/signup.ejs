@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="css/style.css">
+<h1>Sign Up</h1>
+<form action="/signup" method="POST">
+    <div class='nameDiv'>
+        <label for="userName">Username</label>
+        <input type="text" name="userName">
+    </div>
+    <div class='passDiv'>
+        <label for="password">Password</label>
+        <input type="password" name="passWord">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" name="confirmPassWord">
+        <p id="noMatch">
+            <%=message%>
+        </p>
+    </div>
+    <button type='submit'>Submit</button>
+    <p>
+        Already have an account?
+        <a href="/login">Login here</a>
+    </p>
+</form>
+<%- include('partials/footer.ejs') %>
