@@ -2,18 +2,21 @@ const express = require('express');
 
 const router = express.Router();
 
+const session = require('express-session');
+
 router.use(express.json())
 router.use(express.urlencoded({extended :true}));
 
 let users = {"dummy":"123"};
-let auth = false;
 let signMessage = "";
 let logMessage = "";
 let userLogged = "";
 
+router.use(session({secret: "Secretive very", resave: false,
+    saveUninitialized: true}))
 
 router.get('/', (req, res) => {
-    res.render("index", {auth: auth, users: users, userLogged: userLogged});
+    res.render("index", {auth: req.session.auth, users: users, userLogged: userLogged});
 });
 
 router.get('/login', (req, res) => {
@@ -25,7 +28,7 @@ router.post('/login', async (req, res) => {
     if (req.body.attemptedName in users) {
         if (users[req.body.attemptedName] == req.body.attemptedPassword) {
             userLogged = req.body.attemptedName;
-            auth = true;
+            req.session.auth = true;
             res.redirect("/");
         } else {
             logMessage = "Incorrect password 🚫🚫🚫";
